@@ -1,0 +1,36 @@
+
+body{
+    background-color:azure;
+}
+.header{
+    text-align: center;
+    color: red;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+.header .img-fluid{
+    display: block;
+    margin-left: 47%;
+    margin-right: 53%;
+    height: 100px;
+    width: auto;
+    
+}
+.project{
+    margin-top: 25px;
+}
+.project h3{
+    font-weight: bold;
+    color: blue;
+    font-style: italic;
+}
+.project p{
+    padding-top: 20px;
+}
+.submit{
+    margin-top: 30px;
+}
+.logo{
+margin-left: 43%;
+    height: auto;
+    width: 200px;
+}

@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-6"><h1 style="color: black; font-weight:bold;font-size: 40px;">Players</h1></div>
+  <div class="col-6 d-flex justify-content-end" >
+    <a href="/addUser" type="button" class="btn btn-primary align-self-center">Add Players</a>
+  </div>
+    
+
+
+<link rel="stylesheet" href="/css/home.css">
+<table class="table" >
+    <thead class='thead-light'>
+      <tr>
+        <th scope="col" style="color: black; font-weight:bold;font-size: 22px;" >Id</th>
+        <th scope="col" style="color: black; font-weight:bold;font-size: 22px;">FirstName  </th>
+        <th scope="col"style="color: black; font-weight:bold;font-size: 22px;">LastName</th>
+        <th scope="col"style="color: black; font-weight:bold;font-size: 22px;">Email</th>
+        <th scope="col"style="color: black; font-weight:bold;font-size: 22px;">Phone</th>
+
+
+        <th scope="col" class="text-end" class="contain">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+  {{#each rows}}
+      <tr class="table">
+          <th scope="row"style="color: black; font-weight:bold;font-size: 18px;">{{this.id}}</th>
+          <td style="color: black; font-weight:bold;font-size: 18px;">{{this.first_name}}</td>
+          <td style="color: black; font-weight:bold;font-size: 18px;">{{this.last_name}}</td>
+          <td style="color: black; font-weight:bold;font-size: 18px;">{{this.email}}</td>
+          <td style="color: black; font-weight:bold;font-size: 18px;">{{this.phone}}</td>
+          <td class="text-end">
+          <a href="/viewuser/{{this.id}}" type ='button' class='btn btn-light btn-small'> <i class='bi bi-eye' ></i>View</a>
+          <a href="/editUser/{{this.id}}" type ='button' class='btn btn-light btn-small'> <i class='bi bi-pencil' ></i>Edit</a>
+          <a href="/{{this.id}}" type ='button' class='btn btn-light btn-small'> <i class='bi bi-person-x' ></i>Delete</a>
+          </td>
+      </tr>
+     
+    
+     {{/each}}
+
+    </tbody>
+  </table>
